@@ -1,0 +1,10 @@
+D:\Projects\EventManager\EventManager.Models\bin\Debug\EventManager.Models.dll
+D:\Projects\EventManager\EventManager.Models\bin\Debug\EventManager.Models.pdb
+D:\Projects\EventManager\EventManager.Models\obj\Debug\EventManager.Models.csprojResolveAssemblyReference.cache
+D:\Projects\EventManager\EventManager.Models\obj\Debug\EventManager.Models.dll
+D:\Projects\EventManager\EventManager.Models\obj\Debug\EventManager.Models.pdb
+D:\Projects\Inhouse\EventManager\EventManager.Models\bin\Debug\EventManager.Models.dll
+D:\Projects\Inhouse\EventManager\EventManager.Models\bin\Debug\EventManager.Models.pdb
+D:\Projects\Inhouse\EventManager\EventManager.Models\obj\Debug\EventManager.Models.csprojResolveAssemblyReference.cache
+D:\Projects\Inhouse\EventManager\EventManager.Models\obj\Debug\EventManager.Models.dll
+D:\Projects\Inhouse\EventManager\EventManager.Models\obj\Debug\EventManager.Models.pdb

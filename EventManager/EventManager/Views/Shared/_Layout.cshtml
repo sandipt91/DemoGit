@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/themes/fullscreen/galleria/themes/fullscreen/galleria.fullscreen.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Content/galleria/galleria-1.2.9.js"></script>
+    <script type="text/javascript" src='@Url.Content("~/Content/themes/fullscreen/galleria/themes/fullscreen/galleria.fullscreen.min.js")'></script>
+
+    <script type="text/javascript">
+        // Load the Fullscreen theme
+        Galleria.loadTheme('@Url.Content("~/Content/themes/fullscreen/galleria/themes/fullscreen/galleria.fullscreen.min.js")');
+
+        Galleria.configure({
+            transition: 'fade',
+            imageCrop: true,
+            imagePosition: 'center',
+            showInfo: false
+        });
+
+        Galleria.run('#galleria', {
+            autoplay: 15000, // move forward every N seconds
+            show: 0, //which photo to start with
+            showImagenav: true,  //arrow for carousel images
+            thumbnails: false,  //thumbnails at bottoma
+            responsive: true,    //responsive design
+            pauseOnInteraction: false,
+            swipe: false //swipe for smart phones and touch tablets
+
+        });
+        //<img src="~/Images/galleria/1.jpg" />
+        Galleria.ready(function () {
+            $('html,body').css('overflow', 'hidden');
+            for (var i = 1; i <= 12; i++) {
+                var imageName = i + ".jpg";
+                var imgurl = '/Images/galleria/' + imageName; //get image
+                this.push({ image: imgurl });
+            }
+        });
+
+
+        function showFS(mode) {
+            var val = mode ? "visible" : "hidden";
+            var opp = mode ? "hidden" : "visible";
+
+            document.getElementById("fs").style.visibility = val;
+            document.getElementById("fs").style.zIndex = 1;
+
+            document.getElementById("galleria").style.zIndex = -1;
+
+            document.getElementById("body").style.visibility = opp;
+        }
+
+        $(document).keyup(function (e) {
+            if (e.which == 27) {
+                showFS(false);
+            }
+
+            if (e.which == 38) {
+                $('#body')[0].scrollTop = -100;
+            }
+            if (e.which == 40) {
+                $('#body')[0].scrollTop = 100;
+            }
+            console.log(e.which);
+        });
+
+        $(document).ready(function (e) {
+            $("#body").focus();
+        });
+
+    </script>
+
+</head>
+
+<body>
+    @*<span id="fs">
+            <img id="fsIcon" src="~/Images/ridepoolr-logo.png" style="height: initial; width: initial;" onclick="showFS(false);" />
+            To exit Fullscreen, click the Icon or press Escape.
+        </span>
+        <div id="spinnerDiv">
+            <img src="~/Images/loader-spinner.gif" />
+        </div>*@
+
+    <div id="galleria">
+        @*        @for (int i = 1; i < 2; i++)
+            {*@
+        @{
+            Random rnd = new Random();
+            int idxPic = rnd.Next(1, 11);
+
+            var imgurl = "/Images/galleria/" + idxPic + ".jpg"; //get image
+
+            <a href='@imgurl'>
+                <img src='@imgurl' ,
+                     data-big='@imgurl' ,
+                     data-title="bg"
+                     data-description="xyz" />
+            </a>
+        }
+    </div>
+
+    <div tabindex="0" style=" margin-left:15%;margin-right:15%"> @*background-color:black;*@
+
+        <div style="margin-left:30px;">
+
+            <br class="clear" />
+            @RenderSection("featured", required: false)
+            @RenderBody()
+            <br class="clear" />
+            <div class="lower-masthead">
+                <br />
+                @*@Html.Partial("_NavBar")*@
+
+                @*<footer style="margin: 0 auto; width: 900px; background: black; height:130px; ">*@
+                <footer style="background-color:transparent">
+                    <div> <legend></legend></div>
+                    <br />
+                    <div class="content-wrapper">
+                        <div class="float-right">
+                            <nav class="navbar navbar-inverse" role="navigation" style="margin: 0 40px; background-color: #222222">
+                                <ul id="menu">
+                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <span style="color:#fff; width:100%; text-align:center; "><p style="margin-left:10px;">&copy; @DateTime.Now.Year -  EventManager by Sandip Thite</p></span>
+                    </div>
+                </footer>
+
+                <div>
+                    @*<span style="margin-right:10px;" class="float-right">@Html.Partial("_LoginPartial")</span>*@
+
+                    <br />
+                    <br />
+                    <br />
+                    @*<img src="/images/ridepoolr-logo.png" alt="logo" />
+                        <span class="badge">
+                            beta
+                        </span>
+                        <img src="/images/ridepoolr-tagline.png" alt="masthead" />*@
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+@*<body style="margin: 0 auto; width: 900px; height:auto;">
+
+
+        <header style="margin: 0 auto; width: 900px; height:auto;">
+            <div class="content-wrapper" style="background: black; width: 900px;  height:auto; float: left;">
+                <div style="text-align:left">
+                    <img src="~/Images/dff.png" /> &nbsp  <section id="login">  @Html.Partial("_LoginPartial") </section>
+                </div>
+
+                <div> <legend></legend></div>
+            </div>
+        </header>
+        <div id="body" style="background: black; width: 900px; margin: 0 auto;">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+
+        <footer style="margin: 0 auto; width: 900px; background: black; height:130px; ">
+            <div> <legend></legend></div>
+            <br />
+            <div class="content-wrapper">
+                <div class="float-right">
+                    <nav class="navbar navbar-inverse" role="navigation" style="margin: 0 40px; background-color: #222222">
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+                <span style="color:#fff; width:100%; text-align:center;"><p>&copy; @DateTime.Now.Year - FoodProvider by Sandip Thite</p></span>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+        @RenderSection("scripts", required: false)
+    </body>*@
+</html>

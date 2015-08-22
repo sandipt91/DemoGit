@@ -1,0 +1,14 @@
+D:\Projects\EventManager\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Projects\EventManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Projects\EventManager\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Projects\EventManager\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Projects\EventManager\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\EventManager\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Projects\EventManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\Projects\Inhouse\EventManager\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Projects\Inhouse\EventManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Projects\Inhouse\EventManager\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Projects\Inhouse\EventManager\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Projects\Inhouse\EventManager\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\Inhouse\EventManager\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Projects\Inhouse\EventManager\BusinessLogic\obj\Debug\BusinessLogic.pdb

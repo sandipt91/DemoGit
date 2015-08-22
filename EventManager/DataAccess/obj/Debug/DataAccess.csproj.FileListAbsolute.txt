@@ -1,0 +1,10 @@
+D:\Projects\EventManager\DataAccess\bin\Debug\DataAccess.dll
+D:\Projects\EventManager\DataAccess\bin\Debug\DataAccess.pdb
+D:\Projects\EventManager\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Projects\EventManager\DataAccess\obj\Debug\DataAccess.dll
+D:\Projects\EventManager\DataAccess\obj\Debug\DataAccess.pdb
+D:\Projects\Inhouse\EventManager\DataAccess\bin\Debug\DataAccess.dll
+D:\Projects\Inhouse\EventManager\DataAccess\bin\Debug\DataAccess.pdb
+D:\Projects\Inhouse\EventManager\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Projects\Inhouse\EventManager\DataAccess\obj\Debug\DataAccess.dll
+D:\Projects\Inhouse\EventManager\DataAccess\obj\Debug\DataAccess.pdb

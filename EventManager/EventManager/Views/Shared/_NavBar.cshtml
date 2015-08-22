@@ -1,0 +1,39 @@
+﻿@*@helper ActiveItem(string actionName, string controllerName, string areaName)
+{
+    if (ViewContext.RouteData.Values["action"].ToString() == actionName &&
+            ViewContext.RouteData.Values["controller"].ToString() == controllerName &&
+            (ViewContext.RouteData.DataTokens["area"] == null || ViewContext.RouteData.DataTokens["area"].ToString() == areaName))
+    {
+    @:active
+    }
+}*@
+<div class="navbar navbar-inverse ">
+    <div class="container black">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li><a href="/Home/Index">Home</a></li>
+                @*<li><a href="/">Home</a></li>
+                <li><a href="#" onclick="javascript: showFS(true)">Hide App</a></li>
+                <li><a href="/ride/myrides">My Rides</a></li>
+                <li><a href="/events/myevents">My Events</a></li>
+                <li><a href="/UserProfile/UserProfile">My Profile</a></li>
+                <li><a href="/home/about">About RidepoolR</a></li>
+                <li><a href="/home/contact">Contact Us</a></li>*@
+            </ul>
+        </div>
+    </div>
+</div>
